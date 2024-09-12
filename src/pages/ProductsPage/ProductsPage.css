@@ -1,0 +1,96 @@
+.ProductsPage {
+  background: #44B26F;
+  min-height: 100vh;
+  padding: 90px 70px 110px;
+  position: relative;
+}
+
+.ProductsLogo {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+.productTitle {
+  font-size: 64px;
+  color: white;
+  margin-bottom: 75px;
+  margin-top: 80px;
+}
+
+.iconAdd, .iconPreview {
+  width: 30px;
+  height: 30px;
+}
+
+.iconPreview > svg {
+  width: 30px;
+  height: 30px;
+  color: black;
+}
+
+.iconAdd > svg {
+  width: 30px;
+  height: 30px;
+  color: black;
+}
+
+.Button {
+  color: white;
+  background: #44B26F;
+  height: 56px;
+  font-size: 24px;
+  border: none;
+  font-weight: 600;
+  font-family: 'Inter';
+  width: 100%;
+  border-radius: 12px;
+  padding: 0;
+  transition: all .2s;
+  cursor: pointer;
+}
+
+.Button:active {
+  transform: scale(0.9);
+}
+
+
+.two {
+  color: #05BC52;
+  background: white;
+  font-size: 16px;
+  border: none;
+  font-weight: 600;
+  font-family: 'Inter';
+  padding: 16px 30px;
+  border-radius: 12px;
+  position: absolute;
+  left: 200px;
+  top: 90px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all .2s;
+}
+
+.three {
+  color: #05BC52;
+  background: white;
+  font-size: 16px;
+  border: none;
+  font-weight: 600;
+  font-family: 'Inter';
+  padding: 16px 30px;
+  border-radius: 12px;
+  position: absolute;
+  right: 200px;
+  top: 90px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all .2s;
+}
+
+.two:active, .three:active {
+  transform: scale(0.9);
+}
