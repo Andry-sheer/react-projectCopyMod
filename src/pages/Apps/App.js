@@ -43,7 +43,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="*" element={<Error/>} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Login />} />
 
         <Route element={<PrivateRoute/>} >
           <Route path="/product-page" element={<ProductsPage products={products} isLoading={isLoading} isError={isError}/>} />
