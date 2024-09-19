@@ -1,19 +1,19 @@
 
+import { useState, useEffect } from "react";
+import { API_URL } from "../../constants/constants";
 import "./ProductsPage.css";
 import ProductsPageLogo from "../../assets/pagesLogo.svg";
 import Button from "../../components/Button/Button";
 import { IoMdAdd } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
 import ProductsTable from "../ProductsPage/components/ProductsTable/ProductsTable";
-
-
 import { BiSortAlt2 } from "react-icons/bi";
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
 
-const ProductsPage = ({ products, isLoading, isError }) => {
+const ProductsPage = () => {
 
   const navigatePreview = useNavigate();
 
@@ -26,6 +26,32 @@ const ProductsPage = ({ products, isLoading, isError }) => {
     editIcon: <FaEdit className="editIcon" size="20px" />,
     deleteIcon: <MdDelete className="deleteIcon" size="20px" />,
   }
+
+  const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
+
+
+  useEffect(() => {
+    getProducts();
+  }, []);
+
+  const getProducts = async () => {
+    try {
+      const response = await fetch(API_URL + "products");
+
+      if (!response.ok) {
+        throw new Error("Something Error");
+      }
+
+      const productsData = await response.json();
+      setProducts(productsData);
+      setIsLoading(false);
+    } catch (error) {
+      setIsError(true);
+      setIsLoading(false);
+    }
+  };
 
 
   return (
