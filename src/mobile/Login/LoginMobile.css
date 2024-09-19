@@ -1,7 +1,7 @@
 
-@media (max-width: 400px) {
+@media (max-width: 400px) { 
     .CardLogin {
-      padding: 30px;
+      padding: 15px;
     }
 
     .loginLogo {
@@ -25,5 +25,3 @@
     position: relative;
   }
 }
-
-

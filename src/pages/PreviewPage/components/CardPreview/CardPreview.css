@@ -1,6 +1,6 @@
 .cardContainer {
   background: whitesmoke;
-  padding: 20px;
+  padding: 10px;
   flex: 0 1 25%;
   font-weight: 500;
   font-family: 'Inter';
@@ -17,8 +17,8 @@
 
 .cardImg {
   border-radius: 14px;
-  width: 220px;
-  height: 160px;
+  width: 265px;
+  height: 200px;
 }
 
 .cardName {
